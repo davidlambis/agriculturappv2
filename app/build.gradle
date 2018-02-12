@@ -7,11 +7,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "com.interedes.agriculturappv2"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -49,6 +49,16 @@ dependencies {
 
     //EventBus
     implementation "org.greenrobot:eventbus:$rootProject.ext.greenRobotEventBusVersion"
+
+    ///DB FLOW
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:$rootProject.ext.dbflow_version"
+    implementation "com.github.Raizlabs.DBFlow:dbflow-core:$rootProject.ext.dbflow_version"
+    implementation "com.github.Raizlabs.DBFlow:dbflow:$rootProject.ext.dbflow_version"
+
+    ///API REST
+    implementation "com.google.code.gson:gson:$rootProject.ext.geoJson"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofit"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

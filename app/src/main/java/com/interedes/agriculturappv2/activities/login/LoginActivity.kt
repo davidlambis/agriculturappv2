@@ -1,23 +1,29 @@
 package com.interedes.agriculturappv2.activities.login
 
 import android.animation.Animator
+import android.content.IntentFilter
+import android.net.ConnectivityManager
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.view.animation.AnimationUtils
+import com.interedes.agriculturappv2.AgriculturApp
 import com.interedes.agriculturappv2.R
+import com.interedes.agriculturappv2.services.internet_connection.ConnectivityReceiver
 import kotlinx.android.synthetic.main.content_login.*
 
-class LoginActivity : AppCompatActivity(), LoginView {
+class LoginActivity : AppCompatActivity(), LoginView, ConnectivityReceiver.connectivityReceiverListener {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         loadAnimation()
-    }
 
-    //region Métodos Adicionales
+        baseContext.registerReceiver(ConnectivityReceiver(), IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
+        AgriculturApp.instance.setConnectivityListener(this)
+    }
 
 
     //region Métodos Interfaz
@@ -58,6 +64,27 @@ class LoginActivity : AppCompatActivity(), LoginView {
     }
     //endregion
 
+    //region Validar Conexión a Internet
+    //Revisar manualmente
+    private fun checkConnection(): Boolean {
+        return ConnectivityReceiver.isConnected
+        //showSnack(isConnected);
+    }
 
+    override fun onNetworkConnectionChanged(isConnected: Boolean) {
+        if (isConnected) {
+            Snackbar.make(container, getString(R.string.internet_connected), Snackbar.LENGTH_SHORT).show()
+        } else {
+            Snackbar.make(container, getString(R.string.not_internet_connected), Snackbar.LENGTH_SHORT).show()
+        }
+    }
     //endregion
+
+    //region Métodos Ciclo de Vida Actividad
+    override fun onResume() {
+        super.onResume()
+        AgriculturApp.instance.setConnectivityListener(this)
+    }
+    //endregion
+
 }

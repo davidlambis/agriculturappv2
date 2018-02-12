@@ -170,6 +170,9 @@ class RegisterProductorActivity : AppCompatActivity(), RegisterProductorView, Vi
     }
 
     override fun navigateToParentActivity() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            ivBackButtonRegisterProductor?.setColorFilter(getColor(R.color.colorPrimary))
+        }
         returnToParentActivity()
     }
 

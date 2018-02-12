@@ -164,6 +164,9 @@
     <string name="title_exit">SALIR</string>
     <string name="title_selected_options">Seleccione una de las siguientes opciones</string>
 
+    <!-- INTERNET CONNECTION -->
+    <string name="internet_connected">Conectado a Internet</string>
+    <string name="not_internet_connected">No Conectado a Internet</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

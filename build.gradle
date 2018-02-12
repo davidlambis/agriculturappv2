@@ -17,8 +17,10 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
 }
 
@@ -32,9 +34,6 @@ ext {
     targetSdkVersion = 27
     compileSdkVersion = 27
     supportLibraryVersion = '27.0.2'
-
-    //Butterknife
-    butterknifeVersion = '8.8.1'
 
     //Spinner
     library_material_spinner = "1.1.0"
@@ -50,5 +49,13 @@ ext {
 
     //EventBus
     greenRobotEventBusVersion = '3.1.1'
+
+    //Retrofit
+    retrofit="2.0.2"
+    geoJson="2.6.2"
+
+    //DBFlow
+    dbflow_version="4.0.3"
+
 }
 

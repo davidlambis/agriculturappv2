@@ -1,17 +1,21 @@
 package com.interedes.agriculturappv2.activities.home
 
 import android.content.Intent
+import android.content.IntentFilter
+import android.net.ConnectivityManager
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.view.View
+import com.interedes.agriculturappv2.AgriculturApp
 import com.interedes.agriculturappv2.R
 import com.interedes.agriculturappv2.activities.login.LoginActivity
 import com.interedes.agriculturappv2.activities.register_user.RegisterUserActivity
+import com.interedes.agriculturappv2.services.internet_connection.ConnectivityReceiver
 import kotlinx.android.synthetic.main.content_home.*
 
-class HomeActivity : AppCompatActivity(), HomeView, View.OnClickListener {
+class HomeActivity : AppCompatActivity(), HomeView, View.OnClickListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +24,8 @@ class HomeActivity : AppCompatActivity(), HomeView, View.OnClickListener {
         linearLayoutIngresar?.setOnClickListener(this)
         linearLayoutRegistrar?.setOnClickListener(this)
         linearLayoutContactanos?.setOnClickListener(this)
+
+
     }
 
     //region Métodos Interfaz
@@ -77,4 +83,6 @@ class HomeActivity : AppCompatActivity(), HomeView, View.OnClickListener {
         limpiarCambios()
     }
     //endregion
+
+
 }

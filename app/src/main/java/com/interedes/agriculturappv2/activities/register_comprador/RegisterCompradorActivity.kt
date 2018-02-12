@@ -34,8 +34,8 @@ class RegisterCompradorActivity : AppCompatActivity(), RegisterCompradorView, Vi
     override fun navigateToParentActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             ivBackButtonRegisterComprador?.setColorFilter(getColor(R.color.colorPrimary))
-            returnToParentActivity()
         }
+        returnToParentActivity()
     }
 
     override fun loadDialogoRegistroExitoso() {
