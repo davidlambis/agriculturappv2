@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageViewFondoDialogoRegistroExitoso"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@color/grey_900"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_global">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_vas_hacer_oferta"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/title_valor_oferta"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnAceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_global"
+                android:background="@drawable/custom_button"
+                android:drawableEnd="@drawable/ic_aceptar"
+                android:drawableRight="@drawable/ic_aceptar"
+                android:padding="10dp"
+                android:text="@string/btn_aceptar"
+                android:textAlignment="center"
+                android:textColor="@color/grey_600" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_global"
+                android:background="@drawable/custom_button"
+                android:drawableEnd="@drawable/ic_cancelar"
+                android:drawableRight="@drawable/ic_cancelar"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:text="@string/btn_cancelar"
+                android:textAlignment="center"
+                android:textColor="@color/grey_600" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>

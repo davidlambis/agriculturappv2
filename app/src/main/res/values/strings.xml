@@ -1,0 +1,171 @@
+<resources>
+    <string name="app_name">Agriculturapp</string>
+
+    <!-- GLOBALES -->
+    <string name="results_global_search">Mostrando %d Resultados</string>
+
+    <!-- HOME -->
+    <string name="title_ingresar">Ingresar</string>
+    <string name="title_registrarse">Registrarse</string>
+    <string name="title_contactanos">Contáctanos</string>
+
+    <!-- LOGIN-->
+    <string name="edit_text_cedula">Número de Cédula</string>
+    <string name="edit_text_contrasena">Contraseña</string>
+
+    <!--STRING ACTIVITY REGISTER USER-->
+    <string name="title_productor">Productor</string>
+    <string name="title_comprador">Comprador</string>
+    <string name="title_help_register">Necesito ayuda para registrarme</string>
+
+    <!-- REGISTRAR COMPRADOR -->
+    <string name="title_register_comprador">¡Te estás registrando como comprador!</string>
+    <string name="edit_text_nombres">Nombres</string>
+    <string name="edit_text_apellidos">Apellidos</string>
+    <string name="edit_text_numero_cedula">Número de Identificación(Cédula o Nit)</string>
+    <string name="edit_text_confirmar_contrasena">Confirmar Contraseña</string>
+    <string name="edit_text_numero_celular">Número de Celular</string>
+    <string name="edit_text_numero_cuenta">Número de Cuenta</string>
+    <string name="spinner_interes_productos">Intereses de Productos</string>
+    <string name="spinner_metodo_pago">Método de Pago</string>
+    <string name="spinner_banco">Seleccionar Banco</string>
+    <string name="btn_registrar_comprador">Registrar</string>
+
+    <!-- DIÁLOGOS REGISTRO EXITOSO-->
+    <string name="title_felicitaciones">¡ FELICITACIONES !</string>
+    <string name="title_te_has_registrado">Te has registrado exitosamente</string>
+    <string name="title_que_deseas_hacer">¿ Qué deseas hacer ahora ?</string>
+    <string name="title_buscar_productos">Buscar Productos</string>
+
+    <!-- MI CUENTA COMPRADOR -->
+    <string name="title_mi_cuenta_comprador">Mi cuenta</string>
+    <string name="title_compras">Compras</string>
+    <string name="title_mis_proveedores">Mis Proveedores</string>
+    <string name="title_preguntas">Preguntas</string>
+    <string name="title_ofertas">Ofertas</string>
+    <string name="title_compras_realizadas">Compras Realizadas</string>
+    <string name="title_productos_interes">Productos de Interés</string>
+    <string name="title_configuracion">Configuración</string>
+    <string name="title_editar_cuenta">Editar mi Cuenta</string>
+
+    <!-- MERCADO COMPRADOR -->
+    <string name="title_mercado_comprador">Mercado</string>
+    <string name="title_favoritos">Favoritos</string>
+    <string name="title_productos_interes_comprador">Estos son los productos de tu interés. ¡ Selecciona Uno !</string>
+
+    <!-- DETALLE PRODUCTO MERCADO COMPRADOR-->
+    <string name="title_prueba_tomate">Tomate</string>
+    <string name="title_filtrar_busqueda">Filtra tu búsqueda</string>
+    <string name="spinner_calidad">Calidad</string>
+    <string name="spinner_ubicacion">Ubicación</string>
+    <string name="title_ubicacion">Ubicación:</string>
+    <string name="title_mes_cosecha">Mes de Cosecha:</string>
+    <string name="title_disponibilidad">Disponibilidad:</string>
+    <string name="title_primera">Primera:</string>
+    <string name="title_segunda">Segunda:</string>
+    <string name="title_tercera">Tercera:</string>
+
+    <!-- DIALOGO OFERTA -->
+    <string name="title_vas_hacer_oferta">Vas a hacer una oferta al señor %1$s por :</string>
+    <string name="title_valor_oferta">$ %1$d COP</string>
+    <string name="btn_aceptar">Aceptar</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="title_tu_oferta_enviada">¡TU OFERTA HA SIDO ENVIADA !</string>
+    <string name="title_en_espera_aceptacion">EN ESPERA DE ACEPTACIÓN DEL PRODUCTOR</string>
+
+    <!-- VENTAS PRODUCTOR -->
+    <string name="title_productor_ventas">Productor-Ventas</string>
+    <string name="title_productor_cultivos">Productor-Cultivos</string>
+    <string name="title_mis_ventas">Mis Ventas</string>
+    <string name="title_destino">Destino</string>
+    <string name="title_fecha_compra">Fecha de Compra:</string>
+    <string name="title_calidad">Calidad</string>
+    <string name="title_cantidad_ventas">Cantidad</string>
+    <string name="title_comprador_ventas">Comprador</string>
+    <string name="title_oferta_ventas">Oferta: $ %1$s</string>
+    <string name="title_calidad_cantidad">Calidad-Cantidad</string>
+
+    <!-- MIS CULTIVOS PRODUCTOR -->
+    <string name="title_numero_visitas">Numero de Visitas: %1$d</string>
+    <string name="title_disponible_hasta">Disponible hasta el %1$d</string>
+
+    <!-- PREGUNTAS PRODUCTOR-->
+    <string name="title_preguntas_productor">Preguntas</string>
+    <string name="title_pregunta_numero">Pregunta %1$d</string>
+    <string name="btn_responder">Responder</string>
+
+    <!-- OFERTAS PRODUCTOR -->
+    <string name="title_ofertas_productor">Ofertas</string>
+    <string name="btn_rechazar">Rechazar</string>
+    <string name="btn_preguntar">Preguntar</string>
+    <string name="btn_aceptar_productor">Aceptar</string>
+    <string name="title_oferta_numero">Oferta %1$d</string>
+    <string name="title_descripcion_oferta">%1$s te ofertó %2$d por el cultivo de %3$s de %4$d - Calidad de %5$s</string>
+
+    <!-- CLIENTES PRODUCTOR -->
+    <string name="title_mis_clientes">Mis Clientes</string>
+    <string name="title_historial_ventas">Historial de Ventas</string>
+    <string name="title_celular">Celular: </string>
+    <string name="title_direccion">Dirección: </string>
+
+    <!--  PLAGAS PRODUCTOR -->
+    <string name="title_numero_lote">Lote %1$d</string>
+    <string name="title_asistencia_tecnica_plagas">Asistencia Técnica-Plagas</string>
+    <string name="title_tipo_plaga"> Plagas - %1$s </string>
+
+    <!-- DETALLE PLAGA -->
+    <string name="title_plaga_con_numero">%1$s - Plaga %2$d</string>
+
+    <!-- AGROINSUMOS PRODUCTOR -->
+    <string name="title_agroinsumos_pesticidas">Agroinsumos y Pesticidas</string>
+    <string name="title_agroinsumos">Agroinsumos</string>
+
+    <!-- DETALLE OFERTAR MERCADO-->
+    <string name="title_hacer_oferta">¡Haz tu oferta!</string>
+    <string name="title_subtotal">Subtotal</string>
+    <string name="title_oferta">El total de su oferta es:</string>
+    <string name="btn_ofertar">Ofertar</string>
+    <string name="title_cantidad">Cantidad</string>
+    <string name="title_simbolo_money">$</string>
+    <string name="edit_text_oferta">Oferta</string>
+    <string name="title_simbolo_kg">/Kg</string>
+
+    <!-- REGISTRAR PRODUCTOR -->
+    <string name="title_register_productor">¡Te estás registrando como productor!</string>
+    <string name="edit_text_nombre_finca">Nombre de Finca</string>
+    <string name="edit_text_localizacion_finca">Localización de Finca</string>
+    <string name="btn_registrar_productor">Registrar</string>
+    <string name="spinner_tipo_producto">Tipo de Producto(Cultivo)</string>
+    <string name="edit_text_numero_hectareas">Número de Hectáreas</string>
+    <string name="edit_text_mes_siembra">Mes de Siembra</string>
+    <string name="edit_text_mes_cosecha">Mes de Cosecha</string>
+    <string name="title_cantidad_calidad">Cantidad por Calidad del producto</string>
+    <string name="title_cantidad_registrar_productor">Cantidad:</string>
+    <string name="edit_text_cantidad_kg">Cantidad(Kg)</string>
+
+    <!-- MI CUENTA PRODUCTOR-->
+    <string name="btn_agregar_producto">Agregar Producto</string>
+    <string name="title_mis_cultivos">Mis Cultivos</string>
+    <string name="title_ventas_realizadas">Ventas Realizadas</string>
+    <string name="title_clientes">Clientes</string>
+    <string name="title_asistencia_tecnica">Asistencia Técnica</string>
+    <string name="title_plagas">Plagas</string>
+    <string name="title_enfermedades">Enfermedades</string>
+    <string name="title_insumos">Insumos</string>
+    <string name="title_preguntas_frecuentes">Preguntas Frecuentes</string>
+    <string name="title_busqueda">Búsqueda</string>
+    <string name="title_contabilidad">Contabilidad</string>
+    <string name="title_total">Total</string>
+
+    <!-- PROFILE-->
+    <string name="title_mi_cuenta">MI CUENTA</string>
+    <string name="title_mercado">MERCADO</string>
+    <string name="title_notificacion">NOTIFICACIONES</string>
+    <string name="title_exit">SALIR</string>
+    <string name="title_selected_options">Seleccione una de las siguientes opciones</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

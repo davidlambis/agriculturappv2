@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.comprador.mercado_comprador.MercadoCompradorActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_berenjenas"
+        tools:ignore="ContentDescription" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_global">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="@color/grey_900"
+                    android:text="@string/title_mercado_comprador"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_global">
+
+
+                <ImageView
+                    android:id="@+id/imageViewBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_back_button" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@color/grey_900"
+                        android:src="@drawable/ic_productos" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:background="@color/grey_900"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/title_prueba_tomate"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_filtrar_busqueda"
+                android:layout_marginTop="@dimen/margin_global"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/edtMesSiembra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="@string/edit_text_mes_siembra"
+                    android:inputType="number"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/spinnerCalidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:hint="@string/spinner_calidad"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/white"
+                    app:met_baseColor="@color/white"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/white"
+                    app:met_primaryColor="@color/white"
+                    app:met_textColor="@color/white"
+                    app:met_textColorHint="@color/white" />
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/spinnerUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:hint="@string/spinner_ubicacion"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/white"
+                    app:met_baseColor="@color/white"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/white"
+                    app:met_primaryColor="@color/white"
+                    app:met_textColor="@color/white"
+                    app:met_textColorHint="@color/white" />
+
+
+            </LinearLayout>
+
+            <include layout="@layout/content_recyclerview" />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</FrameLayout>

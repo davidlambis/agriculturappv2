@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_ventas_productor"
+        tools:ignore="ContentDescription" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_global"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="start"
+                android:background="@color/grey_900"
+                android:text="@string/title_productor_ventas"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_global"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_global"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_back_button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/grey_900"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/title_mis_ventas"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:text="@string/title_filtrar_busqueda"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fabLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_global"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_search"
+                    android:theme="@style/FloatingButton"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabSize="normal"
+                    app:rippleColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/edtMesCosecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="@string/edit_text_mes_cosecha"
+                    android:inputType="number"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/spinnerCalidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:hint="@string/spinner_calidad"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/white"
+                    app:met_baseColor="@color/white"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/white"
+                    app:met_primaryColor="@color/white"
+                    app:met_textColor="@color/white"
+                    app:met_textColorHint="@color/white" />
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/spinnerUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:hint="@string/spinner_ubicacion"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/white"
+                    app:met_baseColor="@color/white"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/white"
+                    app:met_primaryColor="@color/white"
+                    app:met_textColor="@color/white"
+                    app:met_textColorHint="@color/white" />
+
+
+            </LinearLayout>
+
+            <include layout="@layout/content_recyclerview" />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</FrameLayout>

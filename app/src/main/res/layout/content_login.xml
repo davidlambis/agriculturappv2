@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageViewFondoLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_login"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_agr_app"
+                    tools:ignore="ContentDescription">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/edtCedula"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_logo_productor"
+                            android:drawablePadding="16dp"
+                            android:drawableStart="@drawable/ic_logo_productor"
+                            android:hint="@string/edit_text_cedula"
+                            android:inputType="number"
+                            android:padding="8dp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/edtContrasena"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_candado_img_baker"
+                            android:drawablePadding="16dp"
+                            android:drawableStart="@drawable/ic_candado_img_baker"
+                            android:hint="@string/edit_text_contrasena"
+                            android:inputType="textPassword"
+                            android:padding="8dp" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fabLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/margin_global"
+                        android:clickable="true"
+                        android:src="@drawable/icon_login_white"
+                        android:theme="@style/FloatingButton"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabSize="normal"
+                        app:rippleColor="@color/colorPrimaryDark" />
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleInverse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/colorPrimary"
+                        android:indeterminateTintMode="src_atop"
+                        android:visibility="gone" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
