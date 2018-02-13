@@ -1,4 +1,4 @@
-package com.interedes.agriculturappv2.activities.register_user
+package com.interedes.agriculturappv2.activities.comprador.mercado_comprador
 
 import android.content.Intent
 import android.os.Build
@@ -8,44 +8,16 @@ import android.support.v4.app.NavUtils
 import android.support.v4.app.TaskStackBuilder
 import android.view.View
 import com.interedes.agriculturappv2.R
-import com.interedes.agriculturappv2.activities.comprador.register_comprador.RegisterCompradorActivity
-import com.interedes.agriculturappv2.activities.productor.register_productor.RegisterProductorActivity
-import kotlinx.android.synthetic.main.content_register_user.*
+import kotlinx.android.synthetic.main.content_mercado_comprador.*
 
-class RegisterUserActivity : AppCompatActivity(), RegisterUserView, View.OnClickListener {
-
+class MercadoCompradorActivity : AppCompatActivity(), MercadoCompradorView, View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_user)
-        linearLayoutProductor?.setOnClickListener(this)
-        linearLayoutComprador?.setOnClickListener(this)
-        linearLayoutAyudaRegistro?.setOnClickListener(this)
-        imageViewBackButton?.setOnClickListener(this)
+        setContentView(R.layout.activity_mercado_comprador)
     }
-
 
     //region Métodos Interfaz
-    override fun navigateToRegistrarProductor() {
-        showProgress()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewProductor?.setColorFilter(getColor(R.color.colorPrimary))
-        }
-        startActivity(Intent(this, RegisterProductorActivity::class.java))
-    }
-
-    override fun navigateToRegistrarComprador() {
-        showProgress()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewComprador?.setColorFilter(getColor(R.color.colorPrimary))
-        }
-        startActivity(Intent(this, RegisterCompradorActivity::class.java))
-    }
-
-    override fun navigateToAyudaRegistro() {
-
-    }
-
     override fun navigateToParentActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             imageViewBackButton?.setColorFilter(getColor(R.color.colorPrimary))
@@ -54,42 +26,31 @@ class RegisterUserActivity : AppCompatActivity(), RegisterUserView, View.OnClick
     }
 
     override fun limpiarCambios() {
-        hideProgress()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewProductor?.setColorFilter(getColor(R.color.white))
-            imageViewComprador?.setColorFilter(getColor(R.color.white))
             imageViewBackButton?.setColorFilter(getColor(R.color.white))
         }
     }
 
-    override fun showProgress() {
-        //progressBar?.visibility = View.VISIBLE
-        progressBar?.visibility = View.VISIBLE
+    override fun initAdapter() {
+
     }
 
-    override fun hideProgress() {
-        progressBar?.visibility = View.GONE
+    override fun initRecyclerView() {
+
     }
 
-    //endregion
-
-    //region Método Click
+    //region Método On Click
     override fun onClick(p0: View?) {
         when (p0?.id) {
-            R.id.linearLayoutProductor -> {
-                navigateToRegistrarProductor()
-            }
-            R.id.linearLayoutComprador -> {
-                navigateToRegistrarComprador()
-            }
             R.id.imageViewBackButton -> {
                 navigateToParentActivity()
             }
         }
-
     }
+
     //endregion
 
+    //endregion
     //region Métodos Generales
     private fun returnToParentActivity() {
         // Obtener intent de la actividad padre
@@ -126,6 +87,4 @@ class RegisterUserActivity : AppCompatActivity(), RegisterUserView, View.OnClick
         limpiarCambios()
     }
     //endregion
-
-
 }

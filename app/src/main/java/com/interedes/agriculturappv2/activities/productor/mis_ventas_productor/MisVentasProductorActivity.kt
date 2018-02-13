@@ -1,4 +1,4 @@
-package com.interedes.agriculturappv2.activities.register_user
+package com.interedes.agriculturappv2.activities.productor.mis_ventas_productor
 
 import android.content.Intent
 import android.os.Build
@@ -7,43 +7,36 @@ import android.os.Bundle
 import android.support.v4.app.NavUtils
 import android.support.v4.app.TaskStackBuilder
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.ListAdapter
 import com.interedes.agriculturappv2.R
-import com.interedes.agriculturappv2.activities.comprador.register_comprador.RegisterCompradorActivity
-import com.interedes.agriculturappv2.activities.productor.register_productor.RegisterProductorActivity
-import kotlinx.android.synthetic.main.content_register_user.*
+import kotlinx.android.synthetic.main.content_mis_ventas_productor.*
+import java.util.*
 
-class RegisterUserActivity : AppCompatActivity(), RegisterUserView, View.OnClickListener {
-
+class MisVentasProductorActivity : AppCompatActivity(), MisVentasProductorView, View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register_user)
-        linearLayoutProductor?.setOnClickListener(this)
-        linearLayoutComprador?.setOnClickListener(this)
-        linearLayoutAyudaRegistro?.setOnClickListener(this)
+        setContentView(R.layout.activity_mis_ventas_productor)
+        loadInfo()
         imageViewBackButton?.setOnClickListener(this)
     }
 
-
     //region Métodos Interfaz
-    override fun navigateToRegistrarProductor() {
-        showProgress()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewProductor?.setColorFilter(getColor(R.color.colorPrimary))
-        }
-        startActivity(Intent(this, RegisterProductorActivity::class.java))
-    }
+    override fun loadInfo() {
+        val itemsCalidad = arrayOf("Primera", "Segunda", "Tercera")
+        val itemsCalidadList = ArrayList<String>()
+        itemsCalidadList.addAll(Arrays.asList(*itemsCalidad))
+        spinnerCalidad.setAdapter(null)
+        val calidadArrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, itemsCalidadList)
+        spinnerCalidad?.setAdapter(calidadArrayAdapter)
 
-    override fun navigateToRegistrarComprador() {
-        showProgress()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewComprador?.setColorFilter(getColor(R.color.colorPrimary))
-        }
-        startActivity(Intent(this, RegisterCompradorActivity::class.java))
-    }
-
-    override fun navigateToAyudaRegistro() {
-
+        val itemsUbicacion = arrayOf("Amazonas", "Cundinamarca", "Huila")
+        val itemsUbicacionList = ArrayList<String>()
+        itemsUbicacionList.addAll(Arrays.asList(*itemsUbicacion))
+        spinnerUbicacion.setAdapter(null)
+        val ubicacionArrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, itemsUbicacionList)
+        spinnerUbicacion?.setAdapter(ubicacionArrayAdapter)
     }
 
     override fun navigateToParentActivity() {
@@ -54,39 +47,19 @@ class RegisterUserActivity : AppCompatActivity(), RegisterUserView, View.OnClick
     }
 
     override fun limpiarCambios() {
-        hideProgress()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewProductor?.setColorFilter(getColor(R.color.white))
-            imageViewComprador?.setColorFilter(getColor(R.color.white))
             imageViewBackButton?.setColorFilter(getColor(R.color.white))
         }
     }
-
-    override fun showProgress() {
-        //progressBar?.visibility = View.VISIBLE
-        progressBar?.visibility = View.VISIBLE
-    }
-
-    override fun hideProgress() {
-        progressBar?.visibility = View.GONE
-    }
-
     //endregion
 
     //region Método Click
     override fun onClick(p0: View?) {
         when (p0?.id) {
-            R.id.linearLayoutProductor -> {
-                navigateToRegistrarProductor()
-            }
-            R.id.linearLayoutComprador -> {
-                navigateToRegistrarComprador()
-            }
             R.id.imageViewBackButton -> {
                 navigateToParentActivity()
             }
         }
-
     }
     //endregion
 
@@ -120,12 +93,8 @@ class RegisterUserActivity : AppCompatActivity(), RegisterUserView, View.OnClick
     }
     //endregion
 
-    //region Métodos Ciclo de Vida Actividad
     override fun onResume() {
         super.onResume()
         limpiarCambios()
     }
-    //endregion
-
-
 }

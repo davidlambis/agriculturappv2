@@ -1,4 +1,4 @@
-package com.interedes.agriculturappv2.activities.register_comprador
+package com.interedes.agriculturappv2.activities.comprador.register_comprador
 
 interface RegisterCompradorView {
 

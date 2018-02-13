@@ -145,6 +145,7 @@
 
     <!-- MI CUENTA PRODUCTOR-->
     <string name="btn_agregar_producto">Agregar Producto</string>
+    <string name="btn_agregar_unidad_productiva">Agregar Unidad Productiva</string>
     <string name="title_mis_cultivos">Mis Cultivos</string>
     <string name="title_ventas_realizadas">Ventas Realizadas</string>
     <string name="title_clientes">Clientes</string>

@@ -1,6 +1,5 @@
-package com.interedes.agriculturappv2.activities.register_productor
+package com.interedes.agriculturappv2.activities.productor.register_productor
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
@@ -12,7 +11,6 @@ import android.view.KeyEvent
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.ListAdapter
 import com.interedes.agriculturappv2.R
 import com.interedes.agriculturappv2.activities.profile.ProfileActivity
 import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog
@@ -25,25 +23,25 @@ import java.util.*
 class RegisterProductorActivity : AppCompatActivity(), RegisterProductorView, View.OnClickListener {
 
     //Variables globales
-    private var is_mes_cultivo: Boolean = false
+    //private var is_mes_cultivo: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_productor)
         loadInfo()
-        loadCoordenadas()
-        imageViewLocalizarFinca?.setOnClickListener(this)
+        //loadCoordenadas()
+        //imageViewLocalizarFinca?.setOnClickListener(this)
         ivBackButtonRegisterProductor?.setOnClickListener(this)
-        edtMesSiembra?.setOnClickListener(this)
-        edtMesCosecha?.setOnClickListener(this)
+        //edtMesSiembra?.setOnClickListener(this)
+        //edtMesCosecha?.setOnClickListener(this)
         btnRegistrarProductor?.setOnClickListener(this)
     }
 
 
     //region Métodos Interfaz
-    override fun loadCoordenadas() {
+    /*override fun loadCoordenadas() {
         edtLocalizacionFinca?.setText("75.921231, -4.23132")
-    }
+    }*/
 
     override fun loadInfo() {
         //Presenter
@@ -87,14 +85,16 @@ class RegisterProductorActivity : AppCompatActivity(), RegisterProductorView, Vi
         }
 
         //Spinner Tipo Producto
+        /*
         val itemsTipoProducto = arrayOf("Aguacate", "Cacao", "Fríjol")
         val tipoProductoList = ArrayList<String>()
         tipoProductoList.addAll(Arrays.asList(*itemsTipoProducto))
         spinnerTipoProducto?.setAdapter(null)
         val tipoProductoArrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, tipoProductoList)
-        spinnerTipoProducto?.setAdapter(tipoProductoArrayAdapter)
+        spinnerTipoProducto?.setAdapter(tipoProductoArrayAdapter)*/
     }
 
+    /*
     override fun loadMeses() {
         val yearMonthPickerDialog = YearMonthPickerDialog(this, YearMonthPickerDialog.OnDateSetListener { year, month ->
             /*Locale locale = getResources().getConfiguration().locale;
@@ -117,7 +117,7 @@ class RegisterProductorActivity : AppCompatActivity(), RegisterProductorView, Vi
         })
 
         yearMonthPickerDialog.show()
-    }
+    } */
 
     override fun loadDialogoRegistroExitoso() {
         val dialogo = View.inflate(this, R.layout.dialogo_registro_comprador, null)
@@ -159,6 +159,7 @@ class RegisterProductorActivity : AppCompatActivity(), RegisterProductorView, Vi
         }
     }
 
+    /*
     override fun clickEdtMesSiembra() {
         is_mes_cultivo = true
         loadMeses()
@@ -167,7 +168,7 @@ class RegisterProductorActivity : AppCompatActivity(), RegisterProductorView, Vi
     override fun clickEdtMesCosecha() {
         is_mes_cultivo = false
         loadMeses()
-    }
+    }*/
 
     override fun navigateToParentActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -198,6 +199,7 @@ class RegisterProductorActivity : AppCompatActivity(), RegisterProductorView, Vi
             R.id.ivBackButtonRegisterProductor -> {
                 navigateToParentActivity()
             }
+            /*
             R.id.imageViewLocalizarFinca -> {
                 loadCoordenadas()
             }
@@ -206,7 +208,7 @@ class RegisterProductorActivity : AppCompatActivity(), RegisterProductorView, Vi
             }
             R.id.edtMesCosecha -> {
                 clickEdtMesCosecha()
-            }
+            } */
             R.id.btnRegistrarProductor -> {
                 registerProductor()
             }

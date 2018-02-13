@@ -11,7 +11,6 @@
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -37,19 +36,52 @@
             android:parentActivityName=".activities.home.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.register_productor.RegisterProductorActivity"
+            android:name=".activities.productor.register_productor.RegisterProductorActivity"
             android:configChanges="screenSize|orientation"
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".activities.register_comprador.RegisterCompradorActivity"
+            android:name=".activities.comprador.register_comprador.RegisterCompradorActivity"
             android:configChanges="screenSize|orientation"
             android:parentActivityName=".activities.register_user.RegisterUserActivity"
             android:theme="@style/LoginTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.productor.account_productor.MyAccountProductorActivity"
+            android:parentActivityName=".activities.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.comprador.account_comprador.MyAccountCompradorActivity"
+            android:parentActivityName=".activities.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.productor.mis_cultivos_productor.MisCultivosProductorActivity"
+            android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
+            android:theme="@style/LoginTheme" />
+        <activity
+            android:name=".activities.productor.preguntas_productor.MisPreguntasProductorActivity"
+            android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.productor.ofertas_productor.MisOfertasProductorActivity"
+            android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.productor.mis_ventas_productor.MisVentasProductorActivity"
+            android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
+            android:theme="@style/LoginTheme" />
+        <activity
+            android:name=".activities.productor.mis_clientes_productor.MisClientesProductorActivity"
+            android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
+            android:parentActivityName=".activities.comprador.account_comprador.MyAccountCompradorActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <receiver
@@ -59,6 +91,8 @@
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
+
+
     </application>
 
 </manifest>

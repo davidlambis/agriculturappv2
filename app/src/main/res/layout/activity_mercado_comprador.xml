@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="interedes.agriculturapp.activities.comprador.mercado_comprador.MercadoCompradorActivity">
+    tools:context=".activities.comprador.mercado_comprador.MercadoCompradorActivity">
 
     <include layout="@layout/content_mercado_comprador"></include>
 

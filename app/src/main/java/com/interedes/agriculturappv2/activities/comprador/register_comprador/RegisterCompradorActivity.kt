@@ -1,6 +1,5 @@
-package com.interedes.agriculturappv2.activities.register_comprador
+package com.interedes.agriculturappv2.activities.comprador.register_comprador
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
@@ -12,8 +11,8 @@ import android.view.KeyEvent
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.ListAdapter
 import com.interedes.agriculturappv2.R
+import com.interedes.agriculturappv2.R.id.ivBackButtonRegisterComprador
 import com.interedes.agriculturappv2.activities.profile.ProfileActivity
 import kotlinx.android.synthetic.main.content_register_comprador.*
 import kotlinx.android.synthetic.main.dialogo_registro_comprador.view.*
@@ -100,10 +99,10 @@ class RegisterCompradorActivity : AppCompatActivity(), RegisterCompradorView, Vi
                 spinnerBanco?.setAdapter(null)
                 val bancoArrayAdapter = ArrayAdapter(applicationContext, android.R.layout.simple_spinner_dropdown_item, bancoList)
                 spinnerBanco?.setAdapter(bancoArrayAdapter)
-                spinnerBanco?.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
+                /*spinnerBanco?.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
                     textInputNumeroCuenta?.visibility = View.VISIBLE
                     edtNumeroCuenta?.setText("")
-                }
+                }*/
             } else if (metodoPagoList[position].equals("Otros")) {
                 spinnerBanco?.visibility = View.VISIBLE
                 spinnerBanco?.setText("")
@@ -116,7 +115,7 @@ class RegisterCompradorActivity : AppCompatActivity(), RegisterCompradorView, Vi
                 spinnerBanco?.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l -> }
             } else {
                 spinnerBanco?.visibility = View.GONE
-                textInputNumeroCuenta?.visibility = View.GONE
+                //textInputNumeroCuenta?.visibility = View.GONE
             }
         }
     }
