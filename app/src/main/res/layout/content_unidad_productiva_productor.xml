@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.productor.register_productor.RegisterProductorActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_registro_productor"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_global">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/imageViewBackButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back_button" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/edtNombreFinca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_nombre_finca"
+                        android:drawablePadding="16dp"
+                        android:drawableStart="@drawable/ic_nombre_finca"
+                        android:hint="@string/edit_text_nombre_finca"
+                        android:inputType="text"
+                        android:padding="8dp"
+                        android:textColor="@color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/edtLocalizacionFinca"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_localizacion_finca"
+                            android:drawablePadding="16dp"
+                            android:drawableStart="@drawable/ic_localizacion_finca"
+                            android:enabled="false"
+                            android:hint="@string/edit_text_localizacion_finca"
+                            android:inputType="text"
+                            android:padding="8dp"
+                            android:textColor="@color/white" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <ImageView
+                        android:id="@+id/imageViewLocalizarFinca"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/ic_apuntador" />
+
+                </LinearLayout>
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/spinnerTipoProducto"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.5"
+                    android:hint="@string/spinner_tipo_producto"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/white"
+                    app:met_baseColor="@color/white"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/white"
+                    app:met_primaryColor="@color/white"
+                    app:met_textColor="@color/white"
+                    app:met_textColorHint="@color/white" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/edtNumeroHectareas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_numero_hectareas"
+                        android:drawablePadding="16dp"
+                        android:drawableStart="@drawable/ic_numero_hectareas"
+                        android:hint="@string/edit_text_numero_hectareas"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/edtMesSiembra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_mes"
+                        android:drawablePadding="16dp"
+                        android:drawableStart="@drawable/ic_mes"
+                        android:focusable="false"
+                        android:hint="@string/edit_text_mes_siembra"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/edtMesCosecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_mes"
+                        android:drawablePadding="16dp"
+                        android:drawableStart="@drawable/ic_mes"
+                        android:focusable="false"
+                        android:hint="@string/edit_text_mes_cosecha"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_global"
+                    android:text="@string/title_cantidad_calidad"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:text="@string/title_primera"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                            <EditText
+                                android:id="@+id/edtCantidadPrimera"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/edit_text_cantidad_kg"
+                                android:inputType="number"
+                                android:padding="8dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/white" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:text="@string/title_segunda"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                            <EditText
+                                android:id="@+id/edtCantidadSegunda"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/edit_text_cantidad_kg"
+                                android:inputType="number"
+                                android:padding="8dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/white" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:text="@string/title_tercera"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                            <EditText
+                                android:id="@+id/edtCantidadTercera"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/edit_text_cantidad_kg"
+                                android:inputType="number"
+                                android:padding="8dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/white" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRegistrarUnidadProductiva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_global"
+                android:background="@drawable/custom_button"
+                android:text="@string/btn_registrar_productor"
+                android:textColor="@color/grey_600" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>

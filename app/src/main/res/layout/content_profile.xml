@@ -109,6 +109,32 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linearLayoutUnidadProductiva"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewUnidadProductiva"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@color/grey_900"
+                        android:src="@drawable/ic_carrito" />
+
+                    <TextView
+                        android:id="@+id/textViewUnidadProductiva"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="start"
+                        android:background="@color/grey_900"
+                        android:text="@string/title_unidad_productiva"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/linearLayoutNotificaciones"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -136,6 +162,7 @@
 
 
                 <RelativeLayout
+                    android:id="@+id/relativeLayoutSalir"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="135dp">
@@ -147,6 +174,7 @@
                         android:src="@drawable/ic_salir" />
 
                     <TextView
+                        android:id="@+id/textViewSalir"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"

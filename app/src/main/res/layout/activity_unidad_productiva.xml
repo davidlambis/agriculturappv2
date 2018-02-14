@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".activities.productor.agroinsumos_productor.AgroInsumosProductorActivity">
+    tools:context=".activities.productor.unidad_productiva_productor.UnidadProductivaActivity">
 
-    <include layout="@layout/content_agroinsumos_productor"></include>
+    <include layout="@layout/content_unidad_productiva_productor"></include>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -5,7 +5,8 @@ interface ProfileView {
     fun isCompradorOProductor()
     fun navigateToMiCuenta()
     fun navigateToMercado()
+    fun navigateToUnidadProductiva()
     fun navigateToNotificaciones()
     fun limpiarCambios()
-
+    fun logout()
 }

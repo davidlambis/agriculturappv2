@@ -1,4 +1,4 @@
-package com.interedes.agriculturappv2.activities.comprador.mercado_comprador
+package com.interedes.agriculturappv2.activities.productor.agroinsumos_productor
 
 import android.content.Intent
 import android.os.Build
@@ -8,13 +8,14 @@ import android.support.v4.app.NavUtils
 import android.support.v4.app.TaskStackBuilder
 import android.view.View
 import com.interedes.agriculturappv2.R
-import kotlinx.android.synthetic.main.content_mercado_comprador.*
+import kotlinx.android.synthetic.main.content_agroinsumos_productor.*
 
-class MercadoCompradorActivity : AppCompatActivity(), MercadoCompradorView, View.OnClickListener {
+class AgroInsumosProductorActivity : AppCompatActivity(), AgroInsumosProductorView, View.OnClickListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mercado_comprador)
+        setContentView(R.layout.activity_agroinsumos_productor)
         imageViewBackButton?.setOnClickListener(this)
     }
 
@@ -31,16 +32,9 @@ class MercadoCompradorActivity : AppCompatActivity(), MercadoCompradorView, View
             imageViewBackButton?.setColorFilter(getColor(R.color.white))
         }
     }
+    //endregion
 
-    override fun initAdapter() {
-
-    }
-
-    override fun initRecyclerView() {
-
-    }
-
-    //region Método On Click
+    //region Método Click
     override fun onClick(p0: View?) {
         when (p0?.id) {
             R.id.imageViewBackButton -> {
@@ -48,10 +42,8 @@ class MercadoCompradorActivity : AppCompatActivity(), MercadoCompradorView, View
             }
         }
     }
-
     //endregion
 
-    //endregion
     //region Métodos Generales
     private fun returnToParentActivity() {
         // Obtener intent de la actividad padre
@@ -80,9 +72,8 @@ class MercadoCompradorActivity : AppCompatActivity(), MercadoCompradorView, View
             onBackPressed()
         }
     }
-    //endregion
 
-    //region Métodos Ciclo de Vida Actividad
+    //region Ciclo de Vida Actividad
     override fun onResume() {
         super.onResume()
         limpiarCambios()

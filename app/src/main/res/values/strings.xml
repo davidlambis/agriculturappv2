@@ -3,6 +3,7 @@
 
     <!-- GLOBALES -->
     <string name="results_global_search">Mostrando %d Resultados</string>
+    <string name="error_field_required">Campo Requerido</string>
 
     <!-- HOME -->
     <string name="title_ingresar">Ingresar</string>
@@ -12,6 +13,7 @@
     <!-- LOGIN-->
     <string name="edit_text_cedula">Número de Cédula</string>
     <string name="edit_text_contrasena">Contraseña</string>
+    <string name="snackbar_datos_incorrectos">Usuario o Contraseña Incorrectos</string>
 
     <!--STRING ACTIVITY REGISTER USER-->
     <string name="title_productor">Productor</string>
@@ -132,8 +134,8 @@
 
     <!-- REGISTRAR PRODUCTOR -->
     <string name="title_register_productor">¡Te estás registrando como productor!</string>
-    <string name="edit_text_nombre_finca">Nombre de Finca</string>
-    <string name="edit_text_localizacion_finca">Localización de Finca</string>
+    <string name="edit_text_nombre_finca">Nombre de Unidad Productiva</string>
+    <string name="edit_text_localizacion_finca">Localización de Unidad Productiva</string>
     <string name="btn_registrar_productor">Registrar</string>
     <string name="spinner_tipo_producto">Tipo de Producto(Cultivo)</string>
     <string name="edit_text_numero_hectareas">Número de Hectáreas</string>
@@ -157,12 +159,14 @@
     <string name="title_busqueda">Búsqueda</string>
     <string name="title_contabilidad">Contabilidad</string>
     <string name="title_total">Total</string>
+    <string name="snackbar_unidad_productiva_registrada">Unidad Productiva Registrada</string>
 
     <!-- PROFILE-->
     <string name="title_mi_cuenta">MI CUENTA</string>
     <string name="title_mercado">MERCADO</string>
     <string name="title_notificacion">NOTIFICACIONES</string>
     <string name="title_exit">SALIR</string>
+    <string name="title_unidad_productiva">UNIDAD PRODUCTIVA</string>
     <string name="title_selected_options">Seleccione una de las siguientes opciones</string>
 
     <!-- INTERNET CONNECTION -->

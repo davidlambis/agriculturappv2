@@ -11,6 +11,8 @@ import android.view.View
 import com.interedes.agriculturappv2.R
 import com.interedes.agriculturappv2.R.id.imageViewVentas
 import com.interedes.agriculturappv2.R.id.textViewVentas
+import com.interedes.agriculturappv2.activities.productor.agroinsumos_productor.AgroInsumosProductorActivity
+import com.interedes.agriculturappv2.activities.productor.asistencia_tecnica_productor.AsistenciaTecnicaProductorActivity
 import com.interedes.agriculturappv2.activities.productor.mis_clientes_productor.MisClientesProductorActivity
 import com.interedes.agriculturappv2.activities.productor.mis_cultivos_productor.MisCultivosProductorActivity
 import com.interedes.agriculturappv2.activities.productor.mis_ventas_productor.MisVentasProductorActivity
@@ -31,6 +33,7 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
         linearLayoutVentasRealizadas?.setOnClickListener(this)
         linearLayoutClientes?.setOnClickListener(this)
         linearLayoutPlagas?.setOnClickListener(this)
+        linearLayoutInsumos?.setOnClickListener(this)
     }
 
 
@@ -92,7 +95,7 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
             imageViewPlagas.setColorFilter(getColor(R.color.colorPrimary))
             textViewPlagas.setTextColor(getColor(R.color.colorPrimary))
         }
-        // startActivity(Intent(this, AsistenciaTecnicaProductorActivity::class.java))
+        startActivity(Intent(this, AsistenciaTecnicaProductorActivity::class.java))
     }
 
 
@@ -101,7 +104,11 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
     }
 
     override fun navigateToInsumos() {
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            imageViewInsumos.setColorFilter(getColor(R.color.colorPrimary))
+            textViewInsumos.setTextColor(getColor(R.color.colorPrimary))
+        }
+        startActivity(Intent(this, AgroInsumosProductorActivity::class.java))
     }
 
     override fun navigateToPreguntasFrecuentes() {
@@ -135,6 +142,8 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
             textViewClientes.setTextColor(getColor(R.color.white))
             imageViewPlagas.setColorFilter(getColor(R.color.white))
             textViewPlagas.setTextColor(getColor(R.color.white))
+            imageViewInsumos.setColorFilter(getColor(R.color.white))
+            textViewInsumos.setTextColor(getColor(R.color.white))
         }
 
     }
@@ -163,6 +172,9 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
             }
             R.id.linearLayoutPlagas -> {
                 navigateToPlagas()
+            }
+            R.id.linearLayoutInsumos -> {
+                navigateToInsumos()
             }
         }
     }

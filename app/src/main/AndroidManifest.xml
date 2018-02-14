@@ -78,6 +78,21 @@
             android:name=".activities.productor.mis_clientes_productor.MisClientesProductorActivity"
             android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.productor.asistencia_tecnica_productor.AsistenciaTecnicaProductorActivity"
+            android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.productor.agroinsumos_productor.AgroInsumosProductorActivity"
+            android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".activities.productor.unidad_productiva_productor.UnidadProductivaActivity"
+            android:configChanges="screenSize|orientation"
+            android:parentActivityName=".activities.profile.ProfileActivity"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="stateHidden" />
 
         <activity
             android:name=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
