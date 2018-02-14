@@ -69,11 +69,15 @@
 
 
             <!-- <view style="@style/divider" /> -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_global"
+                android:background="@android:color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_global"
                 android:text="@string/title_mi_cuenta_comprador"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -89,15 +93,15 @@
 
                 <ImageView
                     android:id="@+id/imageViewCultivos"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_productos" />
 
                 <TextView
                     android:id="@+id/textViewCultivos"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_mis_cultivos"
@@ -110,21 +114,21 @@
                 android:id="@+id/linearLayoutPreguntas"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginTop="@dimen/margin_5"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageViewPreguntas"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_preguntas" />
 
                 <TextView
                     android:id="@+id/textViewPreguntas"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_preguntas"
@@ -137,21 +141,21 @@
                 android:id="@+id/linearLayoutOfertas"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginTop="@dimen/margin_5"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageViewOfertas"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_ofertas" />
 
                 <TextView
                     android:id="@+id/textViewOfertas"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_ofertas"
@@ -164,21 +168,21 @@
                 android:id="@+id/linearLayoutVentasRealizadas"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginTop="@dimen/margin_5"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageViewVentas"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_ventas" />
 
                 <TextView
                     android:id="@+id/textViewVentas"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_ventas_realizadas"
@@ -191,21 +195,21 @@
                 android:id="@+id/linearLayoutClientes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginTop="@dimen/margin_5"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageViewClientes"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_proveedores" />
 
                 <TextView
                     android:id="@+id/textViewClientes"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_clientes"
@@ -214,10 +218,22 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@android:color/white" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@android:color/white" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_global"
                 android:text="@string/title_asistencia_tecnica"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -231,15 +247,15 @@
 
                 <ImageView
                     android:id="@+id/imageViewPlagas"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_plagas" />
 
                 <TextView
                     android:id="@+id/textViewPlagas"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_plagas"
@@ -252,21 +268,21 @@
                 android:id="@+id/linearLayoutEnfermedades"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginTop="@dimen/margin_5"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageViewEnfermedades"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_enfermedades" />
 
                 <TextView
                     android:id="@+id/textViewEnfermedades"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_enfermedades"
@@ -279,21 +295,21 @@
                 android:id="@+id/linearLayoutInsumos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginTop="@dimen/margin_5"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageViewInsumos"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_insumos" />
 
                 <TextView
                     android:id="@+id/textViewInsumos"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_insumos"
@@ -306,21 +322,21 @@
                 android:id="@+id/linearLayoutPreguntasFrecuentes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginTop="@dimen/margin_5"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageViewPreguntasFrecuentes"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_preguntas_frecuentes" />
 
                 <TextView
                     android:id="@+id/textViewPreguntasFrecuentes"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_preguntas_frecuentes"
@@ -333,21 +349,21 @@
                 android:id="@+id/linearLayoutBusqueda"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginTop="@dimen/margin_5"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageViewBusqueda"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_busqueda" />
 
                 <TextView
                     android:id="@+id/textViewBusqueda"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_busqueda"
@@ -356,10 +372,21 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@android:color/white" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_global"
                 android:text="@string/title_contabilidad"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
@@ -373,15 +400,15 @@
 
                 <ImageView
                     android:id="@+id/imageViewTotal"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_total" />
 
                 <TextView
                     android:id="@+id/textViewTotal"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_modulo_contable"
@@ -394,21 +421,21 @@
                 android:id="@+id/linearLayoutClientesContabilidad"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_global"
+                android:layout_marginTop="@dimen/margin_5"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageViewClientesContabilidad"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_proveedores" />
 
                 <TextView
                     android:id="@+id/textViewClientesContabilidad"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_clientes"
@@ -417,13 +444,25 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_24"
+                android:background="@android:color/white" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_global"
                 android:text="@string/title_configuracion"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
+
 
             <LinearLayout
                 android:id="@+id/linearLayoutEditarCuenta"
@@ -434,15 +473,15 @@
 
                 <ImageView
                     android:id="@+id/imageViewEditarCuenta"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_configuracion" />
 
                 <TextView
                     android:id="@+id/textViewEditarCuenta"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
                     android:text="@string/title_editar_cuenta"
@@ -451,6 +490,11 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@android:color/white" />
 
         </LinearLayout>
 

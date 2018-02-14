@@ -39,7 +39,7 @@
                 <TextView
                     android:id="@+id/nombreUsuario"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/circleImageViewProfile"
                     android:layout_toRightOf="@+id/circleImageViewProfile"
@@ -66,15 +66,15 @@
 
                     <ImageView
                         android:id="@+id/imageViewMiCuenta"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:background="@color/grey_900"
                         android:src="@drawable/ic_foto_profile" />
 
                     <TextView
                         android:id="@+id/textViewMiCuenta"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="start"
                         android:background="@color/grey_900"
                         android:text="@string/title_mi_cuenta"
@@ -92,15 +92,15 @@
 
                     <ImageView
                         android:id="@+id/imageViewMercado"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:background="@color/grey_900"
                         android:src="@drawable/ic_carrito" />
 
                     <TextView
                         android:id="@+id/textViewMercado"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="start"
                         android:background="@color/grey_900"
                         android:text="@string/title_mercado"
@@ -118,15 +118,15 @@
 
                     <ImageView
                         android:id="@+id/imageViewUnidadProductiva"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:background="@color/grey_900"
                         android:src="@drawable/ic_carrito" />
 
                     <TextView
                         android:id="@+id/textViewUnidadProductiva"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="start"
                         android:background="@color/grey_900"
                         android:text="@string/title_unidad_productiva"
@@ -144,15 +144,15 @@
 
                     <ImageView
                         android:id="@+id/imageViewNotificaciones"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:background="@color/grey_900"
                         android:src="@drawable/ic_notificacion" />
 
                     <TextView
                         android:id="@+id/textViewNotificaciones"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
+                        android:layout_height="30dp"
                         android:layout_gravity="start"
                         android:background="@color/grey_900"
                         android:text="@string/title_notificacion"
