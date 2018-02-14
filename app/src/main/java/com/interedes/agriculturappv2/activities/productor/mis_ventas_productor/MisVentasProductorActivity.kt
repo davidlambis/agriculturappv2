@@ -10,7 +10,9 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListAdapter
 import com.interedes.agriculturappv2.R
+import com.twinkle94.monthyearpicker.picker.YearMonthPickerDialog
 import kotlinx.android.synthetic.main.content_mis_ventas_productor.*
+import java.text.SimpleDateFormat
 import java.util.*
 
 class MisVentasProductorActivity : AppCompatActivity(), MisVentasProductorView, View.OnClickListener {
@@ -20,6 +22,7 @@ class MisVentasProductorActivity : AppCompatActivity(), MisVentasProductorView, 
         setContentView(R.layout.activity_mis_ventas_productor)
         loadInfo()
         imageViewBackButton?.setOnClickListener(this)
+        edtMesCosecha?.setOnClickListener(this)
     }
 
     //region Métodos Interfaz
@@ -37,6 +40,31 @@ class MisVentasProductorActivity : AppCompatActivity(), MisVentasProductorView, 
         spinnerUbicacion.setAdapter(null)
         val ubicacionArrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, itemsUbicacionList)
         spinnerUbicacion?.setAdapter(ubicacionArrayAdapter)
+    }
+
+    override fun loadMeses() {
+        val yearMonthPickerDialog = YearMonthPickerDialog(this, YearMonthPickerDialog.OnDateSetListener { year, month ->
+            /*Locale locale = getResources().getConfiguration().locale;
+                Locale.setDefault(locale);*/
+            val spanish = Locale("es", "ES")
+            Locale.setDefault(spanish)
+            val calendar = Calendar.getInstance(spanish)
+            calendar.set(Calendar.YEAR, year)
+            //month = Integer.parseInt(calendar.getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault()));
+            calendar.set(Calendar.MONTH, month)
+
+
+            val dateFormat = SimpleDateFormat("MMMM yyyy")
+
+
+            edtMesCosecha.setText(dateFormat.format(calendar.time))
+        })
+
+        yearMonthPickerDialog.show()
+    }
+
+    override fun clickEdtMesCosecha() {
+        loadMeses()
     }
 
     override fun navigateToParentActivity() {
@@ -58,6 +86,9 @@ class MisVentasProductorActivity : AppCompatActivity(), MisVentasProductorView, 
         when (p0?.id) {
             R.id.imageViewBackButton -> {
                 navigateToParentActivity()
+            }
+            R.id.edtMesCosecha -> {
+                clickEdtMesCosecha()
             }
         }
     }

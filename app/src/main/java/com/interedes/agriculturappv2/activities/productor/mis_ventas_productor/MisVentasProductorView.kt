@@ -4,4 +4,6 @@ interface MisVentasProductorView {
     fun loadInfo()
     fun navigateToParentActivity()
     fun limpiarCambios()
+    fun loadMeses()
+    fun clickEdtMesCosecha()
 }

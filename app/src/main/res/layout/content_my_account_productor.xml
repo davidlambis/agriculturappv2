@@ -384,7 +384,7 @@
                     android:layout_height="25dp"
                     android:layout_gravity="start"
                     android:background="@color/grey_900"
-                    android:text="@string/title_total"
+                    android:text="@string/title_modulo_contable"
                     android:textAlignment="textStart"
                     android:textColor="@color/white"
                     android:textSize="18sp" />

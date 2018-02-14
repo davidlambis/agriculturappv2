@@ -159,6 +159,7 @@
     <string name="title_busqueda">Búsqueda</string>
     <string name="title_contabilidad">Contabilidad</string>
     <string name="title_total">Total</string>
+    <string name="title_modulo_contable">Módulo Contable</string>
     <string name="snackbar_unidad_productiva_registrada">Unidad Productiva Registrada</string>
 
     <!-- PROFILE-->
