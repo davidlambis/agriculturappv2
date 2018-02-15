@@ -7,7 +7,6 @@ import android.support.v4.view.ViewPager
 import com.interedes.agriculturappv2.R
 import com.interedes.agriculturappv2.activities.productor.modulo_contable_productor.adapters.AdapterViewPagerContabilidad
 import java.util.*
-import com.nshmura.recyclertablayout.RecyclerTabLayout
 import kotlinx.android.synthetic.main.activity_modulo_contable_productor.view.*
 
 class ModuloContableProductorActivity : AppCompatActivity() {

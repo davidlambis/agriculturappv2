@@ -95,7 +95,7 @@
         <activity
             android:name=".activities.productor.modulo_contable_productor.ModuloContableProductorActivity"
             android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/LoginTheme" />
         <activity
             android:name=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
             android:parentActivityName=".activities.comprador.account_comprador.MyAccountCompradorActivity"
