@@ -14,7 +14,7 @@ interface MyAccountProductorView {
     fun navigateToInsumos()
     fun navigateToPreguntasFrecuentes()
     fun navigateToBusqueda()
-    fun navigateToTotal()
+    fun navigateToModuloContable()
     fun navigateToEditarCuenta()
     fun limpiarCambios()
 

@@ -7,4 +7,5 @@
     <dimen name="margin_24">24dp</dimen>
     <dimen name="margin_36">36dp</dimen>
     <dimen name="margin_5">5dp</dimen>
+    <dimen name="tabs_height">48dp</dimen>
 </resources>

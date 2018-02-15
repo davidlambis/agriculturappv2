@@ -16,6 +16,7 @@ import com.interedes.agriculturappv2.activities.productor.asistencia_tecnica_pro
 import com.interedes.agriculturappv2.activities.productor.mis_clientes_productor.MisClientesProductorActivity
 import com.interedes.agriculturappv2.activities.productor.mis_cultivos_productor.MisCultivosProductorActivity
 import com.interedes.agriculturappv2.activities.productor.mis_ventas_productor.MisVentasProductorActivity
+import com.interedes.agriculturappv2.activities.productor.modulo_contable_productor.ModuloContableProductorActivity
 import com.interedes.agriculturappv2.activities.productor.ofertas_productor.MisOfertasProductorActivity
 import com.interedes.agriculturappv2.activities.productor.preguntas_productor.MisPreguntasProductorActivity
 import kotlinx.android.synthetic.main.content_my_account_productor.*
@@ -34,6 +35,7 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
         linearLayoutClientes?.setOnClickListener(this)
         linearLayoutPlagas?.setOnClickListener(this)
         linearLayoutInsumos?.setOnClickListener(this)
+        linearLayoutModuloContable?.setOnClickListener(this)
     }
 
 
@@ -119,8 +121,12 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
 
     }
 
-    override fun navigateToTotal() {
-
+    override fun navigateToModuloContable() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            imageViewModuloContable.setColorFilter(getColor(R.color.colorPrimary))
+            textViewModuloContable.setTextColor(getColor(R.color.colorPrimary))
+        }
+        startActivity(Intent(this, ModuloContableProductorActivity::class.java))
     }
 
     override fun navigateToEditarCuenta() {
@@ -144,6 +150,8 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
             textViewPlagas.setTextColor(getColor(R.color.white))
             imageViewInsumos.setColorFilter(getColor(R.color.white))
             textViewInsumos.setTextColor(getColor(R.color.white))
+            imageViewModuloContable.setColorFilter(getColor(R.color.white))
+            textViewModuloContable.setTextColor(getColor(R.color.white))
         }
 
     }
@@ -175,6 +183,9 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
             }
             R.id.linearLayoutInsumos -> {
                 navigateToInsumos()
+            }
+            R.id.linearLayoutModuloContable -> {
+                navigateToModuloContable()
             }
         }
     }

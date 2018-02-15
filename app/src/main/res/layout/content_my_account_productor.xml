@@ -392,21 +392,21 @@
                 android:textSize="18sp" />
 
             <LinearLayout
-                android:id="@+id/linearLayoutTotal"
+                android:id="@+id/linearLayoutModuloContable"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageViewTotal"
+                    android:id="@+id/imageViewModuloContable"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@color/grey_900"
                     android:src="@drawable/ic_total" />
 
                 <TextView
-                    android:id="@+id/textViewTotal"
+                    android:id="@+id/textViewModuloContable"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="start"

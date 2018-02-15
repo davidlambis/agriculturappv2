@@ -170,6 +170,11 @@
     <string name="title_unidad_productiva">UNIDAD PRODUCTIVA</string>
     <string name="title_selected_options">Seleccione una de las siguientes opciones</string>
 
+    <!-- MÓDULO CONTABLE PRODUCTOR -->
+    <string name="edt_cantidad">Cantidad</string>
+    <string name="edt_cantidad_vendida_gasto"> Cantidad Vendida</string>
+    <string name="spinner_seleccionar_producto">Seleccionar Producto</string>
+
     <!-- INTERNET CONNECTION -->
     <string name="internet_connected">Conectado a Internet</string>
     <string name="not_internet_connected">No Conectado a Internet</string>
