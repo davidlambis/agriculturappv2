@@ -28,7 +28,10 @@ class ModuloContableProductorActivity : AppCompatActivity() {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL)
         tabLayout.setTabMode(TabLayout.MODE_FIXED)
         tabLayout.setupWithViewPager(viewPager)
-        viewPager.currentItem = pagerAdapter.count / 2
+        tabLayout.setTabTextColors(resources.getColor(R.color.black),resources.getColor(R.color.black))
+        tabLayout.setBackgroundColor(resources.getColor(R.color.white))
+        tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.colorPrimary))
+        viewPager.currentItem = 0
     }
 
 

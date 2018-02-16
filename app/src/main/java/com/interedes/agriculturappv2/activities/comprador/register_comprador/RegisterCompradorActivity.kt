@@ -31,9 +31,7 @@ class RegisterCompradorActivity : AppCompatActivity(), RegisterCompradorView, Vi
 
     //region Métodos Interfaz
     override fun navigateToParentActivity() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            ivBackButtonRegisterComprador?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        ivBackButtonRegisterComprador?.setColorFilter(resources.getColor(R.color.colorPrimary))
         returnToParentActivity()
     }
 
@@ -121,9 +119,7 @@ class RegisterCompradorActivity : AppCompatActivity(), RegisterCompradorView, Vi
     }
 
     override fun limpiarCambios() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            ivBackButtonRegisterComprador?.setColorFilter(getColor(R.color.white))
-        }
+        ivBackButtonRegisterComprador?.setColorFilter(resources.getColor(R.color.white))
     }
 
     override fun registerComprador() {

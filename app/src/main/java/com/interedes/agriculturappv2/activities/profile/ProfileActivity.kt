@@ -8,11 +8,14 @@ import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.support.v4.app.ActivityCompat.startActivityForResult
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import com.interedes.agriculturappv2.R
+import com.interedes.agriculturappv2.R.id.*
 import com.interedes.agriculturappv2.activities.comprador.account_comprador.MyAccountCompradorActivity
 import com.interedes.agriculturappv2.activities.comprador.mercado_comprador.MercadoCompradorActivity
 import com.interedes.agriculturappv2.activities.login.LoginActivity
@@ -49,10 +52,8 @@ class ProfileActivity : AppCompatActivity(), ProfileView, View.OnClickListener {
     }
 
     override fun navigateToMiCuenta() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            textViewMiCuenta?.setTextColor(getColor(R.color.colorPrimary))
-            imageViewMiCuenta?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        textViewMiCuenta?.setTextColor(resources.getColor(R.color.colorPrimary))
+        imageViewMiCuenta?.setColorFilter(resources.getColor(R.color.colorPrimary))
         if (isCompradorOProductor == "productor") {
             startActivity(Intent(this, MyAccountProductorActivity::class.java))
         } else if (isCompradorOProductor == "comprador") {
@@ -62,21 +63,17 @@ class ProfileActivity : AppCompatActivity(), ProfileView, View.OnClickListener {
 
     override fun navigateToMercado() {
         if (isCompradorOProductor == "comprador") {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                textViewMercado?.setTextColor(getColor(R.color.colorPrimary))
-                imageViewMercado?.setColorFilter(getColor(R.color.colorPrimary))
-            }
+            textViewMercado?.setTextColor(resources.getColor(R.color.colorPrimary))
+            imageViewMercado?.setColorFilter(resources.getColor(R.color.colorPrimary))
             startActivity(Intent(this, MercadoCompradorActivity::class.java))
         }
     }
 
     override fun navigateToUnidadProductiva() {
         if (isCompradorOProductor == "productor") {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                textViewUnidadProductiva?.setTextColor(getColor(R.color.colorPrimary))
-                imageViewUnidadProductiva?.setColorFilter(getColor(R.color.colorPrimary))
-            }
-            startActivityForResult(Intent(this, UnidadProductivaActivity::class.java),200)
+            textViewUnidadProductiva?.setTextColor(resources.getColor(R.color.colorPrimary))
+            imageViewUnidadProductiva?.setColorFilter(resources.getColor(R.color.colorPrimary))
+            startActivityForResult(Intent(this, UnidadProductivaActivity::class.java), 200)
         }
     }
 
@@ -85,29 +82,25 @@ class ProfileActivity : AppCompatActivity(), ProfileView, View.OnClickListener {
     }
 
     override fun limpiarCambios() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            textViewMiCuenta?.setTextColor(getColor(R.color.white))
-            imageViewMiCuenta?.setColorFilter(getColor(R.color.white))
-            textViewMercado?.setTextColor(getColor(R.color.white))
-            imageViewMercado?.setColorFilter(getColor(R.color.white))
-            imageViewSalir?.setColorFilter(getColor(R.color.white))
-            textViewSalir?.setTextColor(getColor(R.color.white))
-        }
+        textViewMiCuenta?.setTextColor(resources.getColor(R.color.white))
+        imageViewMiCuenta?.setColorFilter(resources.getColor(R.color.white))
+        textViewMercado?.setTextColor(resources.getColor(R.color.white))
+        imageViewMercado?.setColorFilter(resources.getColor(R.color.white))
+        imageViewSalir?.setColorFilter(resources.getColor(R.color.white))
+        textViewSalir?.setTextColor(resources.getColor(R.color.white))
     }
 
     override fun logout() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewSalir?.setColorFilter(getColor(R.color.colorPrimary))
-            textViewSalir?.setTextColor(getColor(R.color.colorPrimary))
-        }
+        imageViewSalir?.setColorFilter(resources.getColor(R.color.colorPrimary))
+        textViewSalir?.setTextColor(resources.getColor(R.color.colorPrimary))
         showExit()
     }
     //endregion
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == 200 && resultCode == Activity.RESULT_OK){
-            Snackbar.make(container,getString(R.string.snackbar_unidad_productiva_registrada), Snackbar.LENGTH_SHORT).show()
+        if (requestCode == 200 && resultCode == Activity.RESULT_OK) {
+            Snackbar.make(container, getString(R.string.snackbar_unidad_productiva_registrada), Snackbar.LENGTH_SHORT).show()
         }
     }
 

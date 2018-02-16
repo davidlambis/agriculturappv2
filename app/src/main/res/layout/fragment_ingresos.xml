@@ -27,7 +27,6 @@
                 android:id="@+id/edtIngreso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusable="false"
                 android:hint="@string/edt_cantidad"
                 android:inputType="number"
                 android:padding="8dp"

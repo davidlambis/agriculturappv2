@@ -15,7 +15,7 @@ import com.interedes.agriculturappv2.activities.register_user.RegisterUserActivi
 import com.interedes.agriculturappv2.services.internet_connection.ConnectivityReceiver
 import kotlinx.android.synthetic.main.content_home.*
 
-class HomeActivity : AppCompatActivity(), HomeView, View.OnClickListener{
+class HomeActivity : AppCompatActivity(), HomeView, View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,33 +30,25 @@ class HomeActivity : AppCompatActivity(), HomeView, View.OnClickListener{
 
     //region Métodos Interfaz
     override fun ingresar() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewIngresar?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        imageViewIngresar?.setColorFilter(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, LoginActivity::class.java))
     }
 
     override fun registrarse() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewRegistrarse?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        imageViewRegistrarse?.setColorFilter(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, RegisterUserActivity::class.java))
     }
 
     override fun contactarnos() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewContactanos?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        imageViewContactanos?.setColorFilter(resources.getColor(R.color.colorPrimary))
         Snackbar.make(container, getString(R.string.title_contactanos), Snackbar.LENGTH_SHORT).show()
     }
 
     override fun limpiarCambios() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewIngresar?.setColorFilter(getColor(R.color.white))
-            imageViewRegistrarse?.setColorFilter(getColor(R.color.white))
-            imageViewContactanos?.setColorFilter(getColor(R.color.white))
+        imageViewIngresar?.setColorFilter(resources.getColor(R.color.white))
+        imageViewRegistrarse?.setColorFilter(resources.getColor(R.color.white))
+        imageViewContactanos?.setColorFilter(resources.getColor(R.color.white))
 
-        }
     }
     //endregion
 

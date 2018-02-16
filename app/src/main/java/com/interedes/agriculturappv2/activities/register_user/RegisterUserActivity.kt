@@ -8,6 +8,7 @@ import android.support.v4.app.NavUtils
 import android.support.v4.app.TaskStackBuilder
 import android.view.View
 import com.interedes.agriculturappv2.R
+import com.interedes.agriculturappv2.R.id.*
 import com.interedes.agriculturappv2.activities.comprador.register_comprador.RegisterCompradorActivity
 import com.interedes.agriculturappv2.activities.productor.register_productor.RegisterProductorActivity
 import kotlinx.android.synthetic.main.content_register_user.*
@@ -28,17 +29,13 @@ class RegisterUserActivity : AppCompatActivity(), RegisterUserView, View.OnClick
     //region Métodos Interfaz
     override fun navigateToRegistrarProductor() {
         showProgress()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewProductor?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        imageViewProductor?.setColorFilter(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, RegisterProductorActivity::class.java))
     }
 
     override fun navigateToRegistrarComprador() {
         showProgress()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewComprador?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        imageViewComprador?.setColorFilter(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, RegisterCompradorActivity::class.java))
     }
 
@@ -47,19 +44,16 @@ class RegisterUserActivity : AppCompatActivity(), RegisterUserView, View.OnClick
     }
 
     override fun navigateToParentActivity() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewBackButton?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        imageViewBackButton?.setColorFilter(resources.getColor(R.color.colorPrimary))
         returnToParentActivity()
     }
 
     override fun limpiarCambios() {
         hideProgress()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewProductor?.setColorFilter(getColor(R.color.white))
-            imageViewComprador?.setColorFilter(getColor(R.color.white))
-            imageViewBackButton?.setColorFilter(getColor(R.color.white))
-        }
+        imageViewProductor?.setColorFilter(resources.getColor(R.color.white))
+        imageViewComprador?.setColorFilter(resources.getColor(R.color.white))
+        imageViewBackButton?.setColorFilter(resources.getColor(R.color.white))
+
     }
 
     override fun showProgress() {

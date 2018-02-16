@@ -1,16 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/margin_global"
-    android:paddingLeft="@dimen/margin_global"
-    android:paddingRight="@dimen/margin_global"
-    android:paddingTop="@dimen/margin_global">
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hello gastos" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_contabilidad" />
 
-</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_global"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+            <EditText
+                android:id="@+id/edtGasto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edt_cantidad"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </android.support.design.widget.TextInputLayout>
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinnerDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/spinner_descripcion_gasto"
+            android:textAlignment="center"
+            android:textColorHint="@color/white"
+            app:met_baseColor="@color/white"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextColor="@color/white"
+            app:met_primaryColor="@color/white"
+            app:met_textColor="@color/white"
+            app:met_textColorHint="@color/white" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinnerSeleccionarProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/spinner_seleccionar_producto"
+            android:textAlignment="center"
+            android:textColorHint="@color/white"
+            app:met_baseColor="@color/white"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelTextColor="@color/white"
+            app:met_primaryColor="@color/white"
+            app:met_textColor="@color/white"
+            app:met_textColorHint="@color/white" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabAgregarIngreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_global"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_done"
+            android:theme="@style/FloatingButton"
+            app:backgroundTint="@color/colorPrimary"
+            app:fabSize="normal"
+            app:rippleColor="@color/colorPrimaryDark" />
+
+        <include layout="@layout/content_recyclerview" />
+
+    </LinearLayout>
+
+</FrameLayout>

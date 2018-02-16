@@ -21,16 +21,12 @@ class AgroInsumosProductorActivity : AppCompatActivity(), AgroInsumosProductorVi
 
     //region Métodos Interfaz
     override fun navigateToParentActivity() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewBackButton?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        imageViewBackButton?.setColorFilter(resources.getColor(R.color.colorPrimary))
         returnToParentActivity()
     }
 
     override fun limpiarCambios() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewBackButton?.setColorFilter(getColor(R.color.white))
-        }
+        imageViewBackButton?.setColorFilter(resources.getColor(R.color.white))
     }
     //endregion
 

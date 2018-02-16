@@ -9,8 +9,7 @@ import android.support.v4.app.TaskStackBuilder
 import android.support.v4.content.ContextCompat.startActivity
 import android.view.View
 import com.interedes.agriculturappv2.R
-import com.interedes.agriculturappv2.R.id.imageViewVentas
-import com.interedes.agriculturappv2.R.id.textViewVentas
+import com.interedes.agriculturappv2.R.id.*
 import com.interedes.agriculturappv2.activities.productor.agroinsumos_productor.AgroInsumosProductorActivity
 import com.interedes.agriculturappv2.activities.productor.asistencia_tecnica_productor.AsistenciaTecnicaProductorActivity
 import com.interedes.agriculturappv2.activities.productor.mis_clientes_productor.MisClientesProductorActivity
@@ -41,9 +40,7 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
 
     //region Métodos Interfaz
     override fun navigateToParentActivity() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewBackButton?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        imageViewBackButton?.setColorFilter(resources.getColor(R.color.colorPrimary))
         returnToParentActivity()
     }
 
@@ -52,26 +49,20 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
     }
 
     override fun navigateToMisCultivos() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewCultivos.setColorFilter(getColor(R.color.colorPrimary))
-            textViewCultivos.setTextColor(getColor(R.color.colorPrimary))
-        }
+        imageViewCultivos.setColorFilter(resources.getColor(R.color.colorPrimary))
+        textViewCultivos.setTextColor(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, MisCultivosProductorActivity::class.java))
     }
 
     override fun navigateToPreguntas() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewPreguntas.setColorFilter(getColor(R.color.colorPrimary))
-            textViewPreguntas.setTextColor(getColor(R.color.colorPrimary))
-        }
+        imageViewPreguntas.setColorFilter(resources.getColor(R.color.colorPrimary))
+        textViewPreguntas.setTextColor(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, MisPreguntasProductorActivity::class.java))
     }
 
     override fun navigateToOfertas() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewOfertas.setColorFilter(getColor(R.color.colorPrimary))
-            textViewOfertas.setTextColor(getColor(R.color.colorPrimary))
-        }
+        imageViewOfertas.setColorFilter(resources.getColor(R.color.colorPrimary))
+        textViewOfertas.setTextColor(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, MisOfertasProductorActivity::class.java))
     }
 
@@ -84,19 +75,15 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
     }
 
     override fun navigateToClientes() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewClientes.setColorFilter(getColor(R.color.colorPrimary))
-            textViewClientes.setTextColor(getColor(R.color.colorPrimary))
-        }
+        imageViewClientes.setColorFilter(resources.getColor(R.color.colorPrimary))
+        textViewClientes.setTextColor(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, MisClientesProductorActivity::class.java))
     }
 
 
     override fun navigateToPlagas() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewPlagas.setColorFilter(getColor(R.color.colorPrimary))
-            textViewPlagas.setTextColor(getColor(R.color.colorPrimary))
-        }
+        imageViewPlagas.setColorFilter(resources.getColor(R.color.colorPrimary))
+        textViewPlagas.setTextColor(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, AsistenciaTecnicaProductorActivity::class.java))
     }
 
@@ -106,10 +93,8 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
     }
 
     override fun navigateToInsumos() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewInsumos.setColorFilter(getColor(R.color.colorPrimary))
-            textViewInsumos.setTextColor(getColor(R.color.colorPrimary))
-        }
+        imageViewInsumos.setColorFilter(resources.getColor(R.color.colorPrimary))
+        textViewInsumos.setTextColor(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, AgroInsumosProductorActivity::class.java))
     }
 
@@ -122,10 +107,8 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
     }
 
     override fun navigateToModuloContable() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewModuloContable.setColorFilter(getColor(R.color.colorPrimary))
-            textViewModuloContable.setTextColor(getColor(R.color.colorPrimary))
-        }
+        imageViewModuloContable.setColorFilter(resources.getColor(R.color.colorPrimary))
+        textViewModuloContable.setTextColor(resources.getColor(R.color.colorPrimary))
         startActivity(Intent(this, ModuloContableProductorActivity::class.java))
     }
 
@@ -134,25 +117,23 @@ class MyAccountProductorActivity : AppCompatActivity(), MyAccountProductorView, 
     }
 
     override fun limpiarCambios() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewBackButton.setColorFilter(getColor(R.color.white))
-            imageViewVentas.setColorFilter(getColor(R.color.white))
-            textViewVentas.setTextColor(getColor(R.color.white))
-            imageViewCultivos.setColorFilter(getColor(R.color.white))
-            textViewCultivos.setTextColor(getColor(R.color.white))
-            imageViewPreguntas.setColorFilter(getColor(R.color.white))
-            textViewPreguntas.setTextColor(getColor(R.color.white))
-            imageViewOfertas.setColorFilter(getColor(R.color.white))
-            textViewOfertas.setTextColor(getColor(R.color.white))
-            imageViewClientes.setColorFilter(getColor(R.color.white))
-            textViewClientes.setTextColor(getColor(R.color.white))
-            imageViewPlagas.setColorFilter(getColor(R.color.white))
-            textViewPlagas.setTextColor(getColor(R.color.white))
-            imageViewInsumos.setColorFilter(getColor(R.color.white))
-            textViewInsumos.setTextColor(getColor(R.color.white))
-            imageViewModuloContable.setColorFilter(getColor(R.color.white))
-            textViewModuloContable.setTextColor(getColor(R.color.white))
-        }
+        imageViewBackButton.setColorFilter(resources.getColor(R.color.white))
+        imageViewVentas.setColorFilter(resources.getColor(R.color.white))
+        textViewVentas.setTextColor(resources.getColor(R.color.white))
+        imageViewCultivos.setColorFilter(resources.getColor(R.color.white))
+        textViewCultivos.setTextColor(resources.getColor(R.color.white))
+        imageViewPreguntas.setColorFilter(resources.getColor(R.color.white))
+        textViewPreguntas.setTextColor(resources.getColor(R.color.white))
+        imageViewOfertas.setColorFilter(resources.getColor(R.color.white))
+        textViewOfertas.setTextColor(resources.getColor(R.color.white))
+        imageViewClientes.setColorFilter(resources.getColor(R.color.white))
+        textViewClientes.setTextColor(resources.getColor(R.color.white))
+        imageViewPlagas.setColorFilter(resources.getColor(R.color.white))
+        textViewPlagas.setTextColor(resources.getColor(R.color.white))
+        imageViewInsumos.setColorFilter(resources.getColor(R.color.white))
+        textViewInsumos.setTextColor(resources.getColor(R.color.white))
+        imageViewModuloContable.setColorFilter(resources.getColor(R.color.white))
+        textViewModuloContable.setTextColor(resources.getColor(R.color.white))
 
     }
     //endregion

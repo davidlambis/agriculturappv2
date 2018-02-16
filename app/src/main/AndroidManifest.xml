@@ -61,6 +61,7 @@
         <activity
             android:name=".activities.productor.mis_cultivos_productor.MisCultivosProductorActivity"
             android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
+            android:configChanges="screenSize|orientation"
             android:theme="@style/LoginTheme" />
         <activity
             android:name=".activities.productor.preguntas_productor.MisPreguntasProductorActivity"
@@ -73,6 +74,7 @@
         <activity
             android:name=".activities.productor.mis_ventas_productor.MisVentasProductorActivity"
             android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
+            android:configChanges="screenSize|orientation"
             android:theme="@style/LoginTheme" />
         <activity
             android:name=".activities.productor.mis_clientes_productor.MisClientesProductorActivity"
@@ -94,8 +96,10 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.productor.modulo_contable_productor.ModuloContableProductorActivity"
+            android:configChanges="screenSize|orientation"
             android:parentActivityName=".activities.productor.account_productor.MyAccountProductorActivity"
-            android:theme="@style/LoginTheme" />
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activities.comprador.mercado_comprador.MercadoCompradorActivity"
             android:parentActivityName=".activities.comprador.account_comprador.MyAccountCompradorActivity"

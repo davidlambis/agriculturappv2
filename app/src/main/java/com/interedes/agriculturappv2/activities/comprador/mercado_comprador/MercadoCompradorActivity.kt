@@ -8,6 +8,7 @@ import android.support.v4.app.NavUtils
 import android.support.v4.app.TaskStackBuilder
 import android.view.View
 import com.interedes.agriculturappv2.R
+import com.interedes.agriculturappv2.R.id.imageViewBackButton
 import kotlinx.android.synthetic.main.content_mercado_comprador.*
 
 class MercadoCompradorActivity : AppCompatActivity(), MercadoCompradorView, View.OnClickListener {
@@ -20,16 +21,12 @@ class MercadoCompradorActivity : AppCompatActivity(), MercadoCompradorView, View
 
     //region Métodos Interfaz
     override fun navigateToParentActivity() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewBackButton?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        imageViewBackButton?.setColorFilter(resources.getColor(R.color.colorPrimary))
         returnToParentActivity()
     }
 
     override fun limpiarCambios() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewBackButton?.setColorFilter(getColor(R.color.white))
-        }
+        imageViewBackButton?.setColorFilter(resources.getColor(R.color.white))
     }
 
     override fun initAdapter() {

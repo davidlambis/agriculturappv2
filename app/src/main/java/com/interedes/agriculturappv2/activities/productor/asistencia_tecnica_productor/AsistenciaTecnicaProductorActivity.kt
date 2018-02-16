@@ -8,6 +8,7 @@ import android.support.v4.app.NavUtils
 import android.support.v4.app.TaskStackBuilder
 import android.view.View
 import com.interedes.agriculturappv2.R
+import com.interedes.agriculturappv2.R.id.imageViewBackButton
 import kotlinx.android.synthetic.main.content_asistencia_tecnica_productor.*
 
 class AsistenciaTecnicaProductorActivity : AppCompatActivity(), View.OnClickListener, AsistenciaTecnicaProductorView {
@@ -21,16 +22,12 @@ class AsistenciaTecnicaProductorActivity : AppCompatActivity(), View.OnClickList
 
     //region Métodos Interfaz
     override fun navigateToParentActivity() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewBackButton?.setColorFilter(getColor(R.color.colorPrimary))
-        }
+        imageViewBackButton?.setColorFilter(resources.getColor(R.color.colorPrimary))
         returnToParentActivity()
     }
 
     override fun limpiarCambios() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            imageViewBackButton?.setColorFilter(getColor(R.color.white))
-        }
+        imageViewBackButton?.setColorFilter(resources.getColor(R.color.white))
     }
     //endregion
 
